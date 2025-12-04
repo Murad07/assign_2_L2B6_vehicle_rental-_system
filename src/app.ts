@@ -1,6 +1,7 @@
 import express, { Request, Response } from 'express';
 import initDB from './config/db';
 import { userRoutes } from './modules/user/user.routes';
+import { authRoutes } from './modules/auth/auth.routes';
 
 
 
@@ -17,6 +18,8 @@ initDB().catch(console.error);
 app.get('/', (req: Request, res: Response) => {
     res.send('Hello Assignment 2 L2B6 Vehicle Rental System!')
 })
+
+app.use('/api/v1/auth', authRoutes);
 
 // User CRUD endpoints go here
 app.use('/users', userRoutes);
