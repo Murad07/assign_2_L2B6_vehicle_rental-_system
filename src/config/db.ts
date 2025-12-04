@@ -16,7 +16,7 @@ const initDB = async () => {
                 phone VARCHAR(15),
                 role VARCHAR(50) CHECK (role IN ('admin', 'customer')) NOT NULL,
                 created_at TIMESTAMP DEFAULT NOW(),
-                updated_at TIMESTAMP DEFAULT NOW(),
+                updated_at TIMESTAMP DEFAULT NOW()
             )
         `);
 
@@ -40,8 +40,11 @@ const initDB = async () => {
                 vehicle_id INTEGER REFERENCES vehicles(id) ON DELETE SET NULL,
                 rent_start_date DATE NOT NULL,
                 rent_end_date DATE NOT NULL CHECK (rent_end_date > rent_start_date),
-                total_price NUMERIC(10, 2) CHECK(total_price >= 0) NOT NULL,
+                total_price NUMERIC(10, 2) CHECK(total_price > 0) NOT NULL,
                 status VARCHAR(50) CHECK (status IN ('active', 'cancelled', 'returned')),
+                created_at TIMESTAMP DEFAULT NOW(),
+                updated_at TIMESTAMP DEFAULT NOW()
+            )
         `);
 
 
