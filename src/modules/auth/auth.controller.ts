@@ -49,6 +49,44 @@ const registerUser = async (req: Request, res: Response) => {
 
 }
 
+const singinUser = async (req: Request, res: Response) => {
+    const { email, password } = req.body;
+
+    try {
+        const result = await authService.signinUser(email, password);
+
+        if (result === null) {
+            return res.status(404).json({
+                success: false,
+                message: 'Login failed',
+                errors: 'User not found'
+            });
+        }
+
+        if (result === false) {
+            return res.status(401).json({
+                success: false,
+                message: 'Authentication failed',
+                errors: 'Invalid password'
+            });
+        }
+
+        res.status(200).json({
+            success: true,
+            message: 'Login successful',
+            data: result
+        });
+
+    } catch (err: any) {
+        res.status(500).json({
+            success: false,
+            message: 'Login failed',
+            errors: err.message
+        });
+    }
+}
+
 export const AuthController = {
     registerUser,
+    singinUser,
 };

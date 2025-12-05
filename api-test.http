@@ -9,3 +9,12 @@ Content-Type: application/json
   "phone": "01712345602",
   "role": "customer"
 }
+
+### User Login API Test
+POST http://localhost:5000/api/v1/auth/signin
+Content-Type: application/json
+
+{
+  "email": "araf@example.com",
+  "password": "123456"
+}
