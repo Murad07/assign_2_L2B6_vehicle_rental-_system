@@ -3,8 +3,8 @@ POST http://localhost:5000/api/v1/auth/signup
 Content-Type: application/json
 
 {
-  "name": "Araf Hossain",
-  "email": "araf@example.com",
+  "name": "Murad Hossain",
+  "email": "murad@example.com",
   "password": "123456",
   "phone": "01712345600",
   "role": "customer"
