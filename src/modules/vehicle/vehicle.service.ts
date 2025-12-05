@@ -22,25 +22,26 @@ const getVehicleById = async (vehicleId: string) => {
     return result;
 }
 
-const updateVehicle = async (userId: string, data: {
-    name?: string,
-    email?: string,
-    phone?: string,
-    role?: string
+const updateVehicle = async (vehicleId: string, data: {
+    vehicle_name?: string,
+    type?: string,
+    registration_number?: string,
+    daily_rent_price?: number,
+    availability_status?: string
 }) => {
     const columns = Object.keys(data).map(column => `${column} = $${Object.keys(data).indexOf(column) + 1}`);
     const values = Object.values(data);
 
     const result = await pool.query(
-        `UPDATE users SET ${columns.join(', ')} WHERE id = $${Object.keys(data).length + 1} RETURNING id, name, email, phone, role`,
-        [...values, userId]
+        `UPDATE vehicles SET ${columns.join(', ')} WHERE id = $${Object.keys(data).length + 1} RETURNING id, vehicle_name, type, registration_number, daily_rent_price, availability_status`,
+        [...values, vehicleId]
     );
 
     return result;
 }
 
-const deleteVehicle = async (userId: string) => {
-    const result = await pool.query('DELETE FROM users WHERE id = $1 RETURNING *', [userId]);
+const deleteVehicle = async (vehicleId: string) => {
+    const result = await pool.query('DELETE FROM vehicles WHERE id = $1 RETURNING *', [vehicleId]);
     return result;
 }
 

@@ -47,7 +47,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgS
 {
   "vehicle_name": "Toyota Camry 2024",
   "type": "car",
-  "registration_number": "ABC-1234",
+  "registration_number": "ABC-1200",
   "daily_rent_price": 50,
   "availability_status": "available"
 }
@@ -57,3 +57,21 @@ GET http://localhost:5000/api/v1/vehicles
 
 ### Get Vehicle By ID API Test
 GET http://localhost:5000/api/v1/vehicles/1
+
+### Update Vehicle API Test
+PUT http://localhost:5000/api/v1/vehicles/2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY0OTU0MDY0LCJleHAiOjE3NjQ5NzIwNjR9.ZS5P18ijU7Hm7iCx36oJDxcir_tUXQdEiPIJmR4D7ls
+
+{
+  "vehicle_name": "Toyota Camry 2024 Premium",
+  "type": "car",
+  "registration_number": "ABC-1234",
+  "daily_rent_price": 55,
+  "availability_status": "available"
+}
+
+### Delete Vehicle API Test
+DELETE http://localhost:5000/api/v1/vehicles/3
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY0OTU0MDY0LCJleHAiOjE3NjQ5NzIwNjR9.ZS5P18ijU7Hm7iCx36oJDxcir_tUXQdEiPIJmR4D7ls

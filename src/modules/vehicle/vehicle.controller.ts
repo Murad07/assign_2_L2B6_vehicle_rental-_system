@@ -76,8 +76,63 @@ const getVehicleById = async (req: Request, res: Response) => {
     }
 }
 
+const updateVehicle = async (req: Request, res: Response) => {
+    try {
+        const result = await vechicleService.updateVehicle(req.params.vehicleId as string, req.body);
+
+        if (result.rows.length === 0) {
+            return res.status(404).json({
+                success: false,
+                message: 'Vehicle not found',
+                errors: 'Vehicle not found'
+            });
+        }
+
+        res.status(200).json({
+            success: true,
+            message: 'Vehicle updated successfully',
+            data: result.rows[0]
+        });
+
+    } catch (err: any) {
+        res.status(500).json({
+            success: false,
+            message: 'Vehicle update failed',
+            errors: err.message
+        });
+    }
+}
+
+const deleteVehicle = async (req: Request, res: Response) => {
+    try {
+        const result = await vechicleService.deleteVehicle(req.params.vehicleId as string);
+
+        if (result.rows.length === 0) {
+            return res.status(404).json({
+                success: false,
+                message: 'Vehicle not found',
+                errors: 'Vehicle not found'
+            });
+        }
+
+        res.status(200).json({
+            success: true,
+            message: 'Vehicle deleted successfully',
+        });
+
+    } catch (err: any) {
+        res.status(500).json({
+            success: false,
+            message: 'Vehicle deletion failed',
+            errors: err.message
+        });
+    }
+}
+
 export const vehicleController = {
     createVehicle,
     getAllVehicles,
-    getVehicleById
+    getVehicleById,
+    updateVehicle,
+    deleteVehicle
 };
