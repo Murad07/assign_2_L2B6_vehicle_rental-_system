@@ -3,10 +3,10 @@ POST http://localhost:5000/api/v1/auth/signup
 Content-Type: application/json
 
 {
-  "name": "Mujahid Hossain",
-  "email": "mujahid@example.com",
-  "password": "123456",
-  "phone": "01712345602",
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "password": "securePassword123",
+  "phone": "01712345678",
   "role": "customer"
 }
 
@@ -15,21 +15,26 @@ POST http://localhost:5000/api/v1/auth/signin
 Content-Type: application/json
 
 {
-  "email": "araf@example.com",
+  "email": "murad@example.com",
   "password": "123456"
 }
 
 ### Get All Users API Test
 POST http://localhost:5000/api/v1/users
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQXJhZiBIb3NzYWluIFVwZGF0ZWQiLCJyb2xlIjoiY3VzdG9tZXIiLCJlbWFpbCI6ImFyYWZAZXhhbXBsZS5jb20iLCJpZCI6MywiaWF0IjoxNzY0OTA4OTE1LCJleHAiOjE3NjQ5MjY5MTV9.MdFcHNWK8oj8B1JWReuL0Loyg0W3vlH47GhZw1_YBc4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY0OTEwNTcxLCJleHAiOjE3NjQ5Mjg1NzF9.CmiCinhSpCQrPO6ffz2XGyZVfYFDMrlwa9mKSm35Xxc
 
 ### Update User API Test
 PUT http://localhost:5000/api/v1/users/3
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQXJhZiBIb3NzYWluIFVwZGF0ZWQiLCJyb2xlIjoiY3VzdG9tZXIiLCJlbWFpbCI6ImFyYWZAZXhhbXBsZS5jb20iLCJpZCI6MywiaWF0IjoxNzY0OTA4OTE1LCJleHAiOjE3NjQ5MjY5MTV9.MdFcHNWK8oj8B1JWReuL0Loyg0W3vlH47GhZw1_YBc4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY0OTEwNTcxLCJleHAiOjE3NjQ5Mjg1NzF9.CmiCinhSpCQrPO6ffz2XGyZVfYFDMrlwa9mKSm35Xxc
 
 {
-  "name": "Araf Hossain",
+  "name": "Araf Hossain Updated",
   "role": "customer"
 }
+
+### Delete User API Test
+DELETE http://localhost:5000/api/v1/users/10
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY0OTEwNTcxLCJleHAiOjE3NjQ5Mjg1NzF9.CmiCinhSpCQrPO6ffz2XGyZVfYFDMrlwa9mKSm35Xxc

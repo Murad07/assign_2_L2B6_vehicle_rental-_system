@@ -23,7 +23,22 @@ const updateUser = async (userId: string, data: {
     return result;
 }
 
+const deleteUser = async (userId: string) => {
+    const result = await pool.query('DELETE FROM users WHERE id = $1 RETURNING *', [userId]);
+    return result;
+}
+
+const getActiveBookingsByUserId = async (userId: string) => {
+    const result = await pool.query(
+        'SELECT * FROM bookings WHERE customer_id = $1 AND status = $2',
+        [userId, 'active']
+    );
+    return result;
+}
+
 export const userService = {
     getAllUsers,
-    updateUser
+    updateUser,
+    deleteUser,
+    getActiveBookingsByUserId
 };
