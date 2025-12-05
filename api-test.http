@@ -22,12 +22,12 @@ Content-Type: application/json
 ### Get All Users API Test
 POST http://localhost:5000/api/v1/users
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY0OTEwNTcxLCJleHAiOjE3NjQ5Mjg1NzF9.CmiCinhSpCQrPO6ffz2XGyZVfYFDMrlwa9mKSm35Xxc
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY0OTU0MDY0LCJleHAiOjE3NjQ5NzIwNjR9.ZS5P18ijU7Hm7iCx36oJDxcir_tUXQdEiPIJmR4D7ls
 
 ### Update User API Test
 PUT http://localhost:5000/api/v1/users/3
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY0OTEwNTcxLCJleHAiOjE3NjQ5Mjg1NzF9.CmiCinhSpCQrPO6ffz2XGyZVfYFDMrlwa9mKSm35Xxc
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY0OTU0MDY0LCJleHAiOjE3NjQ5NzIwNjR9.ZS5P18ijU7Hm7iCx36oJDxcir_tUXQdEiPIJmR4D7ls
 
 {
   "name": "Araf Hossain Updated",
@@ -37,4 +37,17 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgS
 ### Delete User API Test
 DELETE http://localhost:5000/api/v1/users/10
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY0OTEwNTcxLCJleHAiOjE3NjQ5Mjg1NzF9.CmiCinhSpCQrPO6ffz2XGyZVfYFDMrlwa9mKSm35Xxc
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY0OTU0MDY0LCJleHAiOjE3NjQ5NzIwNjR9.ZS5P18ijU7Hm7iCx36oJDxcir_tUXQdEiPIJmR4D7ls
+
+### Vehicle Creation API Test
+POST http://localhost:5000/api/v1/vehicles
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY0OTU0MDY0LCJleHAiOjE3NjQ5NzIwNjR9.ZS5P18ijU7Hm7iCx36oJDxcir_tUXQdEiPIJmR4D7ls
+
+{
+  "vehicle_name": "Honda Civic",
+  "type": "bike",
+  "registration_number": "ABB-1235",
+  "daily_rent_price": 40,
+  "availability_status": "available"
+}
