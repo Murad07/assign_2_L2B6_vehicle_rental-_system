@@ -22,7 +22,7 @@ app.get('/', (req: Request, res: Response) => {
 app.use('/api/v1/auth', authRoutes);
 
 // User CRUD endpoints go here
-app.use('/users', userRoutes);
+app.use('/api/v1/users', userRoutes);
 
 
 app.use((req: Request, res: Response) => {

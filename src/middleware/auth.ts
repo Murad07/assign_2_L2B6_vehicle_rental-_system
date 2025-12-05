@@ -5,7 +5,8 @@ import config from "../config";
 const auth = (...roles: string[]) => {
     return async (req: Request, res: Response, next: NextFunction) => {
         try {
-            const token = req.headers.authorization;
+            const tokenWithBearer = req.headers.authorization;
+            const token = tokenWithBearer && tokenWithBearer.split(' ')[1];
 
             if (!token) {
                 return res.status(401).json({

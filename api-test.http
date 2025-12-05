@@ -18,3 +18,8 @@ Content-Type: application/json
   "email": "araf@example.com",
   "password": "123456"
 }
+
+### Get All Users API Test
+POST http://localhost:5000/api/v1/users
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQXJhZiBIb3NzYWluIiwicm9sZSI6ImFkbWluIiwiZW1haWwiOiJhcmFmQGV4YW1wbGUuY29tIiwiaWQiOjMsImlhdCI6MTc2NDkwNjIwMCwiZXhwIjoxNzY0OTI0MjAwfQ.6vKPmwDg6aVhb2DUzoN-8watU5m9z2MIpYubJarrma4
