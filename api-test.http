@@ -22,4 +22,14 @@ Content-Type: application/json
 ### Get All Users API Test
 POST http://localhost:5000/api/v1/users
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQXJhZiBIb3NzYWluIiwicm9sZSI6ImFkbWluIiwiZW1haWwiOiJhcmFmQGV4YW1wbGUuY29tIiwiaWQiOjMsImlhdCI6MTc2NDkwNjIwMCwiZXhwIjoxNzY0OTI0MjAwfQ.6vKPmwDg6aVhb2DUzoN-8watU5m9z2MIpYubJarrma4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQXJhZiBIb3NzYWluIFVwZGF0ZWQiLCJyb2xlIjoiY3VzdG9tZXIiLCJlbWFpbCI6ImFyYWZAZXhhbXBsZS5jb20iLCJpZCI6MywiaWF0IjoxNzY0OTA4OTE1LCJleHAiOjE3NjQ5MjY5MTV9.MdFcHNWK8oj8B1JWReuL0Loyg0W3vlH47GhZw1_YBc4
+
+### Update User API Test
+PUT http://localhost:5000/api/v1/users/3
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQXJhZiBIb3NzYWluIFVwZGF0ZWQiLCJyb2xlIjoiY3VzdG9tZXIiLCJlbWFpbCI6ImFyYWZAZXhhbXBsZS5jb20iLCJpZCI6MywiaWF0IjoxNzY0OTA4OTE1LCJleHAiOjE3NjQ5MjY5MTV9.MdFcHNWK8oj8B1JWReuL0Loyg0W3vlH47GhZw1_YBc4
+
+{
+  "name": "Araf Hossain",
+  "role": "customer"
+}
