@@ -13,7 +13,7 @@ const createVehicle = async (payload: Record<string, unknown>) => {
 }
 
 const getAllVehicles = async () => {
-    const result = await pool.query('SELECT id, name, email, phone, role FROM users');
+    const result = await pool.query('SELECT id, vehicle_name, type, registration_number, daily_rent_price, availability_status FROM vehicles');
     return result;
 }
 

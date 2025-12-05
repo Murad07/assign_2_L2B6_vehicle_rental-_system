@@ -45,9 +45,12 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY0OTU0MDY0LCJleHAiOjE3NjQ5NzIwNjR9.ZS5P18ijU7Hm7iCx36oJDxcir_tUXQdEiPIJmR4D7ls
 
 {
-  "vehicle_name": "Honda Civic",
-  "type": "bike",
-  "registration_number": "ABB-1235",
-  "daily_rent_price": 40,
+  "vehicle_name": "Toyota Camry 2024",
+  "type": "car",
+  "registration_number": "ABC-1234",
+  "daily_rent_price": 50,
   "availability_status": "available"
 }
+
+### Get All Vehicles API Test
+GET http://localhost:5000/api/v1/vehicles
