@@ -57,6 +57,7 @@ const createBooking = async (payload: Record<string, unknown>) => {
 }
 
 const getAllBookings = async (isAdmin: boolean, customer_id: string) => {
+    await autoReturnBooking();
 
     let query = `SELECT b.id, b.customer_id, b.vehicle_id, b.rent_start_date, b.rent_end_date, b.total_price, b.status, v.vehicle_name, v.daily_rent_price 
         FROM bookings b 
