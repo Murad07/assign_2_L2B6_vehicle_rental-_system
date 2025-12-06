@@ -15,7 +15,7 @@ POST http://localhost:5000/api/v1/auth/signin
 Content-Type: application/json
 
 {
-  "email": "murad@example.com",
+  "email": "araf@example.com",
   "password": "123456"
 }
 
@@ -79,11 +79,17 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgS
 ### Create Booking API Test
 POST http://localhost:5000/api/v1/bookings
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY0OTk3MzUzLCJleHAiOjE3NjUwMTUzNTN9.u3HthDI8_DTTbpFCwh6E-v8tZEHlsvCfYOfSozFRUbU
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQXJhZiBIb3NzYWluIFVwZGF0ZWQiLCJyb2xlIjoiY3VzdG9tZXIiLCJlbWFpbCI6ImFyYWZAZXhhbXBsZS5jb20iLCJpZCI6MywiaWF0IjoxNzY1MDA0ODI3LCJleHAiOjE3NjUwMjI4Mjd9.BezYDzeU1I1bh7NEoq9GXtpIn6DvGBjVTqDNei2Qm4M
 
 {
-  "customer_id": 7,
-  "vehicle_id": 2,
+  "customer_id": 3,
+  "vehicle_id": 1,
   "rent_start_date": "2025-12-05",
   "rent_end_date": "2025-12-07"
 }
+
+### Get All Booking API Test
+GET http://localhost:5000/api/v1/bookings
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQXJhZiBIb3NzYWluIFVwZGF0ZWQiLCJyb2xlIjoiY3VzdG9tZXIiLCJlbWFpbCI6ImFyYWZAZXhhbXBsZS5jb20iLCJpZCI6MywiaWF0IjoxNzY1MDA0ODI3LCJleHAiOjE3NjUwMjI4Mjd9.BezYDzeU1I1bh7NEoq9GXtpIn6DvGBjVTqDNei2Qm4M
+

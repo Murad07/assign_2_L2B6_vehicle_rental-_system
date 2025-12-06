@@ -30,6 +30,29 @@ const createBooking = async (req: Request, res: Response) => {
 
 }
 
+const getAllBookings = async (req: Request, res: Response) => {
+    try {
+        const requesterUser = req.user as { id: string, role: string };
+        const isAdmin = requesterUser.role === 'admin';
+
+        const success_msg = isAdmin ? 'Bookings retrieved successfully' : 'Your bookings retrieved successfully';
+
+        const result = await bookingService.getAllBookings(isAdmin, requesterUser.id as string);
+        res.status(200).json({
+            success: true,
+            message: success_msg,
+            data: result.data
+        });
+    } catch (err: any) {
+        res.status(500).json({
+            success: false,
+            message: "Something went wrong",
+            errors: err.message,
+        });
+    }
+}
+
 export const bookingController = {
-    createBooking
+    createBooking,
+    getAllBookings
 };
