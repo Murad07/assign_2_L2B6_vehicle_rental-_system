@@ -105,6 +105,16 @@ const updateVehicle = async (req: Request, res: Response) => {
 
 const deleteVehicle = async (req: Request, res: Response) => {
     try {
+        const checkActiveBookings = await vechicleService.getActiveBookingsByVehicleId(req.params.vehicleId as string);
+
+        if (checkActiveBookings.rows.length > 0) {
+            return res.status(400).json({
+                success: false,
+                message: 'Vehicle deletion failed',
+                errors: 'Vehicle has active bookings'
+            });
+        }
+
         const result = await vechicleService.deleteVehicle(req.params.vehicleId as string);
 
         if (result.rows.length === 0) {

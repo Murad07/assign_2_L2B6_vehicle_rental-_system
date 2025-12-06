@@ -25,7 +25,7 @@ const registerUser = async (req: Request, res: Response) => {
 
         const result = await authService.registerUser(req.body);
 
-        console.log('User inserted:', result.rows[0]);
+        // console.log('User inserted:', result.rows[0]);
 
         res.status(201).json({
             success: true,

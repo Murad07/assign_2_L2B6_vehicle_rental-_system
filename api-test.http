@@ -3,8 +3,8 @@ POST http://localhost:5000/api/v1/auth/signup
 Content-Type: application/json
 
 {
-  "name": "John Doe",
-  "email": "john.doe@example.com",
+  "name": "John Doe 4",
+  "email": "john.doe4@example.com",
   "password": "securePassword123",
   "phone": "01712345678",
   "role": "customer"
@@ -22,12 +22,12 @@ Content-Type: application/json
 ### Get All Users API Test
 POST http://localhost:5000/api/v1/users
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY0OTk3MzUzLCJleHAiOjE3NjUwMTUzNTN9.u3HthDI8_DTTbpFCwh6E-v8tZEHlsvCfYOfSozFRUbU
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY1MDMwMzQ3LCJleHAiOjE3NjUwNDgzNDd9.GW__k1OsGKPbv36fmZ3rDB3isI2pFO-X_7yj8cTN_uE
 
 ### Update User API Test
-PUT http://localhost:5000/api/v1/users/3
+PUT http://localhost:5000/api/v1/users/4
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY0OTk3MzUzLCJleHAiOjE3NjUwMTUzNTN9.u3HthDI8_DTTbpFCwh6E-v8tZEHlsvCfYOfSozFRUbU
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY1MDMwMzQ3LCJleHAiOjE3NjUwNDgzNDd9.GW__k1OsGKPbv36fmZ3rDB3isI2pFO-X_7yj8cTN_uE
 
 {
   "name": "Araf Hossain Updated",
@@ -35,19 +35,19 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgS
 }
 
 ### Delete User API Test
-DELETE http://localhost:5000/api/v1/users/10
+DELETE http://localhost:5000/api/v1/users/11
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY0OTk3MzUzLCJleHAiOjE3NjUwMTUzNTN9.u3HthDI8_DTTbpFCwh6E-v8tZEHlsvCfYOfSozFRUbU
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY1MDMwMzQ3LCJleHAiOjE3NjUwNDgzNDd9.GW__k1OsGKPbv36fmZ3rDB3isI2pFO-X_7yj8cTN_uE
 
 ### Vehicle Creation API Test
 POST http://localhost:5000/api/v1/vehicles
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY0OTk3MzUzLCJleHAiOjE3NjUwMTUzNTN9.u3HthDI8_DTTbpFCwh6E-v8tZEHlsvCfYOfSozFRUbU
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY1MDMwMzQ3LCJleHAiOjE3NjUwNDgzNDd9.GW__k1OsGKPbv36fmZ3rDB3isI2pFO-X_7yj8cTN_uE
 
 {
-  "vehicle_name": "Toyota Camry 2024",
+  "vehicle_name": "Toyota Camry 2024 for delete",
   "type": "car",
-  "registration_number": "ABC-1200",
+  "registration_number": "ABC-1210",
   "daily_rent_price": 50,
   "availability_status": "available"
 }
@@ -61,7 +61,7 @@ GET http://localhost:5000/api/v1/vehicles/1
 ### Update Vehicle API Test
 PUT http://localhost:5000/api/v1/vehicles/2
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY0OTk3MzUzLCJleHAiOjE3NjUwMTUzNTN9.u3HthDI8_DTTbpFCwh6E-v8tZEHlsvCfYOfSozFRUbU
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY1MDMwMzQ3LCJleHAiOjE3NjUwNDgzNDd9.GW__k1OsGKPbv36fmZ3rDB3isI2pFO-X_7yj8cTN_uE
 
 {
   "vehicle_name": "Toyota Camry 2024 Premium",
@@ -72,9 +72,9 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgS
 }
 
 ### Delete Vehicle API Test
-DELETE http://localhost:5000/api/v1/vehicles/3
+DELETE http://localhost:5000/api/v1/vehicles/4
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY0OTk3MzUzLCJleHAiOjE3NjUwMTUzNTN9.u3HthDI8_DTTbpFCwh6E-v8tZEHlsvCfYOfSozFRUbU
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY1MDMwMzQ3LCJleHAiOjE3NjUwNDgzNDd9.GW__k1OsGKPbv36fmZ3rDB3isI2pFO-X_7yj8cTN_uE
 
 ### Create Booking API Test
 POST http://localhost:5000/api/v1/bookings
