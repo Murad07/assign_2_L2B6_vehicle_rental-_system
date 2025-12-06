@@ -15,7 +15,7 @@ POST http://localhost:5000/api/v1/auth/signin
 Content-Type: application/json
 
 {
-  "email": "araf@example.com",
+  "email": "murad@example.com",
   "password": "123456"
 }
 
@@ -79,17 +79,25 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgS
 ### Create Booking API Test
 POST http://localhost:5000/api/v1/bookings
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQXJhZiBIb3NzYWluIFVwZGF0ZWQiLCJyb2xlIjoiY3VzdG9tZXIiLCJlbWFpbCI6ImFyYWZAZXhhbXBsZS5jb20iLCJpZCI6MywiaWF0IjoxNzY1MDA0ODI3LCJleHAiOjE3NjUwMjI4Mjd9.BezYDzeU1I1bh7NEoq9GXtpIn6DvGBjVTqDNei2Qm4M
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY1MDMwMzQ3LCJleHAiOjE3NjUwNDgzNDd9.GW__k1OsGKPbv36fmZ3rDB3isI2pFO-X_7yj8cTN_uE
 
 {
   "customer_id": 3,
-  "vehicle_id": 1,
-  "rent_start_date": "2025-12-05",
-  "rent_end_date": "2025-12-07"
+  "vehicle_id": 2,
+  "rent_start_date": "2025-12-08",
+  "rent_end_date": "2025-12-09"
 }
 
 ### Get All Booking API Test
 GET http://localhost:5000/api/v1/bookings
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQXJhZiBIb3NzYWluIFVwZGF0ZWQiLCJyb2xlIjoiY3VzdG9tZXIiLCJlbWFpbCI6ImFyYWZAZXhhbXBsZS5jb20iLCJpZCI6MywiaWF0IjoxNzY1MDA0ODI3LCJleHAiOjE3NjUwMjI4Mjd9.BezYDzeU1I1bh7NEoq9GXtpIn6DvGBjVTqDNei2Qm4M
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY1MDMwMzQ3LCJleHAiOjE3NjUwNDgzNDd9.GW__k1OsGKPbv36fmZ3rDB3isI2pFO-X_7yj8cTN_uE
 
+### Update Booking API Test
+PUT http://localhost:5000/api/v1/bookings/11
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY1MDMwMzQ3LCJleHAiOjE3NjUwNDgzNDd9.GW__k1OsGKPbv36fmZ3rDB3isI2pFO-X_7yj8cTN_uE
+
+{
+  "status": "returned"
+}

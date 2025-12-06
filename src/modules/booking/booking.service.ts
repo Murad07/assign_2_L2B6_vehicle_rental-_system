@@ -89,6 +89,76 @@ const getAllBookings = async (isAdmin: boolean, customer_id: string) => {
     return { data: final_result };
 }
 
+const updateBooking = async (bookingId: string, data: Record<string, unknown>) => {
+
+    let bookingUpdate = null;
+    if (data.status === 'cancelled') {
+        bookingUpdate = await pool.query(
+            `UPDATE bookings SET status = $1 WHERE id = $2 AND rent_start_date > now() RETURNING *`,
+            [data.status, bookingId]
+        );
+    } else {
+        bookingUpdate = await pool.query(
+            `UPDATE bookings SET status = $1 WHERE id = $2 RETURNING *`,
+            [data.status, bookingId]
+        );
+    }
+
+    if (Number(bookingUpdate.rowCount) === 0) {
+        return { message: "You can't cancel this booking", data: null };
+    }
+
+    const update_vehicle_status = await pool.query(
+        `UPDATE vehicles SET availability_status = $1 WHERE id IN (
+             SELECT vehicle_id FROM bookings
+         ) RETURNING *`,
+        ['available']
+    );
+
+
+    let final_result = null;
+    let message = null;
+    if (data.status === 'returned') {
+        message = "Booking marked as returned. Vehicle is now available";
+        final_result = {
+            id: bookingUpdate.rows[0].id,
+            customer_id: bookingUpdate.rows[0].customer_id,
+            vehicle_id: bookingUpdate.rows[0].vehicle_id,
+            rent_start_date: bookingUpdate.rows[0].rent_start_date.toISOString().split('T')[0],
+            rent_end_date: bookingUpdate.rows[0].rent_end_date.toISOString().split('T')[0],
+            total_price: bookingUpdate.rows[0].total_price,
+            status: bookingUpdate.rows[0].status,
+            vehicle: {
+                availability_status: update_vehicle_status.rows[0].availability_status
+            }
+        }
+    } else {
+        message = "Booking cancelled successfully";
+
+        final_result = {
+            id: bookingUpdate.rows[0].id,
+            customer_id: bookingUpdate.rows[0].customer_id,
+            vehicle_id: bookingUpdate.rows[0].vehicle_id,
+            rent_start_date: bookingUpdate.rows[0].rent_start_date.toISOString().split('T')[0],
+            rent_end_date: bookingUpdate.rows[0].rent_end_date.toISOString().split('T')[0],
+            total_price: bookingUpdate.rows[0].total_price,
+            status: bookingUpdate.rows[0].status
+        }
+    }
+
+    return { message: message, data: final_result };
+
+}
+
+const getBookingUser = async (bookingId: string, customerId: string) => {
+    const result = await pool.query(
+        `SELECT COUNT(*) FROM bookings WHERE id = $1 AND customer_id = $2`,
+        [bookingId, customerId]
+    );
+
+    return result;
+}
+
 const autoReturnBooking = async () => {
     const currentDate = new Date();
 
@@ -114,5 +184,7 @@ const autoReturnBooking = async () => {
 
 export const bookingService = {
     createBooking,
-    getAllBookings
+    getAllBookings,
+    updateBooking,
+    getBookingUser
 };
