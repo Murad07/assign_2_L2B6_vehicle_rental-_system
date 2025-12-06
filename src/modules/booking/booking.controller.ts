@@ -4,7 +4,6 @@ import { bookingService } from "./booking.service";
 const createBooking = async (req: Request, res: Response) => {
 
     try {
-        // Call the booking service to create a booking
         const result = await bookingService.createBooking(req.body);
 
         if (result.error) {
@@ -14,8 +13,6 @@ const createBooking = async (req: Request, res: Response) => {
                 errors: result.error
             });
         }
-
-        console.log('Booking created:', result.data);
 
         res.status(201).json({
             success: true,

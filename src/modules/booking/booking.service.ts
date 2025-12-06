@@ -8,29 +8,27 @@ const createBooking = async (payload: Record<string, unknown>) => {
 
     // customer availability check
     const customer_result = await pool.query('SELECT COUNT(*) FROM users WHERE id = $1', [customer_id]);
-
     if (parseInt(customer_result.rows[0].count) === 0) {
         return { error: "No Customer found" };
     }
 
     const vehicle_result = await pool.query('SELECT COUNT(*) FROM vehicles WHERE id = $1', [vehicle_id]);
-
     if (parseInt(vehicle_result.rows[0].count) === 0) {
         return { error: "No Vehicle found" };
     }
 
     // Vehicle availability check
-    const availability_result = await pool.query(
-        `SELECT COUNT(*) FROM bookings 
-         WHERE vehicle_id = $1 
-         AND status = 'active' 
-         AND NOT (rent_end_date < $2 OR rent_start_date > $3)`,
-        [vehicle_id, start_date, end_date]
-    );
+    // const availability_result = await pool.query(
+    //     `SELECT COUNT(*) FROM bookings 
+    //      WHERE vehicle_id = $1 
+    //      AND status = 'active' 
+    //      AND NOT (rent_end_date < $2 OR rent_start_date > $3)`,
+    //     [vehicle_id, start_date, end_date]
+    // );
 
-    if (parseInt(availability_result.rows[0].count) > 0) {
-        return { error: "Vehicle is not available for the selected dates" };
-    }
+    // if (parseInt(availability_result.rows[0].count) > 0) {
+    //     return { error: "Vehicle is not available for the selected dates" };
+    // }
 
     // total_price calculation
     const number_of_days = Math.ceil(Math.abs(end_date.getTime() - start_date.getTime()) / (1000 * 60 * 60 * 24));
