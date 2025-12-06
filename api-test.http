@@ -22,12 +22,12 @@ Content-Type: application/json
 ### Get All Users API Test
 POST http://localhost:5000/api/v1/users
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY0OTU0MDY0LCJleHAiOjE3NjQ5NzIwNjR9.ZS5P18ijU7Hm7iCx36oJDxcir_tUXQdEiPIJmR4D7ls
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY0OTk3MzUzLCJleHAiOjE3NjUwMTUzNTN9.u3HthDI8_DTTbpFCwh6E-v8tZEHlsvCfYOfSozFRUbU
 
 ### Update User API Test
 PUT http://localhost:5000/api/v1/users/3
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY0OTU0MDY0LCJleHAiOjE3NjQ5NzIwNjR9.ZS5P18ijU7Hm7iCx36oJDxcir_tUXQdEiPIJmR4D7ls
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY0OTk3MzUzLCJleHAiOjE3NjUwMTUzNTN9.u3HthDI8_DTTbpFCwh6E-v8tZEHlsvCfYOfSozFRUbU
 
 {
   "name": "Araf Hossain Updated",
@@ -37,12 +37,12 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgS
 ### Delete User API Test
 DELETE http://localhost:5000/api/v1/users/10
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY0OTU0MDY0LCJleHAiOjE3NjQ5NzIwNjR9.ZS5P18ijU7Hm7iCx36oJDxcir_tUXQdEiPIJmR4D7ls
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY0OTk3MzUzLCJleHAiOjE3NjUwMTUzNTN9.u3HthDI8_DTTbpFCwh6E-v8tZEHlsvCfYOfSozFRUbU
 
 ### Vehicle Creation API Test
 POST http://localhost:5000/api/v1/vehicles
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY0OTU0MDY0LCJleHAiOjE3NjQ5NzIwNjR9.ZS5P18ijU7Hm7iCx36oJDxcir_tUXQdEiPIJmR4D7ls
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY0OTk3MzUzLCJleHAiOjE3NjUwMTUzNTN9.u3HthDI8_DTTbpFCwh6E-v8tZEHlsvCfYOfSozFRUbU
 
 {
   "vehicle_name": "Toyota Camry 2024",
@@ -61,7 +61,7 @@ GET http://localhost:5000/api/v1/vehicles/1
 ### Update Vehicle API Test
 PUT http://localhost:5000/api/v1/vehicles/2
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY0OTU0MDY0LCJleHAiOjE3NjQ5NzIwNjR9.ZS5P18ijU7Hm7iCx36oJDxcir_tUXQdEiPIJmR4D7ls
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY0OTk3MzUzLCJleHAiOjE3NjUwMTUzNTN9.u3HthDI8_DTTbpFCwh6E-v8tZEHlsvCfYOfSozFRUbU
 
 {
   "vehicle_name": "Toyota Camry 2024 Premium",
@@ -74,4 +74,16 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgS
 ### Delete Vehicle API Test
 DELETE http://localhost:5000/api/v1/vehicles/3
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY0OTU0MDY0LCJleHAiOjE3NjQ5NzIwNjR9.ZS5P18ijU7Hm7iCx36oJDxcir_tUXQdEiPIJmR4D7ls
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY0OTk3MzUzLCJleHAiOjE3NjUwMTUzNTN9.u3HthDI8_DTTbpFCwh6E-v8tZEHlsvCfYOfSozFRUbU
+
+### Create Booking API Test
+POST http://localhost:5000/api/v1/bookings
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY0OTk3MzUzLCJleHAiOjE3NjUwMTUzNTN9.u3HthDI8_DTTbpFCwh6E-v8tZEHlsvCfYOfSozFRUbU
+
+{
+  "customer_id": 7,
+  "vehicle_id": 2,
+  "rent_start_date": "2024-01-23",
+  "rent_end_date": "2024-01-24"
+}
