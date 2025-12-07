@@ -15,7 +15,7 @@ POST https://assign-2-l2-b6-vehicle-rental-syste.vercel.app/api/v1/auth/signin
 Content-Type: application/json
 
 {
-  "email": "murad@example.com",
+  "email": "araf@example.com",
   "password": "123456"
 }
 
@@ -25,9 +25,9 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY1MDc5NDM5LCJleHAiOjE3NjUwOTc0Mzl9.19lcnAmZoZX93GEGDTY7NUNRpNvTbnYR2IuaPQleVIQ
 
 ### Update User API Test
-PUT https://assign-2-l2-b6-vehicle-rental-syste.vercel.app/api/v1/users/3
+PUT http://localhost:5000/api/v1/users/3
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY1MDc5NDM5LCJleHAiOjE3NjUwOTc0Mzl9.19lcnAmZoZX93GEGDTY7NUNRpNvTbnYR2IuaPQleVIQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQXJhZiBIb3NzYWluIiwicm9sZSI6ImN1c3RvbWVyIiwiZW1haWwiOiJhcmFmQGV4YW1wbGUuY29tIiwiaWQiOjMsImlhdCI6MTc2NTA4NDY4OCwiZXhwIjoxNzY1MTAyNjg4fQ.M1e2UxtnlQMkb0lKEbLUzapaFCGHlnb5ERB18xqDwtA
 
 {
   "name": "Araf Hossain",
@@ -76,13 +76,13 @@ DELETE https://assign-2-l2-b6-vehicle-rental-syste.vercel.app/api/v1/vehicles/5
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY1MDc5NDM5LCJleHAiOjE3NjUwOTc0Mzl9.19lcnAmZoZX93GEGDTY7NUNRpNvTbnYR2IuaPQleVIQ
 
-### Create Booking API Test
-POST http://localhost:5000/api/v1/bookings
+### Create Booking API Test http://localhost:5000
+POST https://assign-2-l2-b6-vehicle-rental-syste.vercel.app/api/v1/bookings
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY1MDc5NDM5LCJleHAiOjE3NjUwOTc0Mzl9.19lcnAmZoZX93GEGDTY7NUNRpNvTbnYR2IuaPQleVIQ
 
 {
-  "customer_id": 2,
+  "customer_id": 4,
   "vehicle_id": 2,
   "rent_start_date": "2025-12-23",
   "rent_end_date": "2025-12-24"
@@ -94,7 +94,7 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY1MDc5NDM5LCJleHAiOjE3NjUwOTc0Mzl9.19lcnAmZoZX93GEGDTY7NUNRpNvTbnYR2IuaPQleVIQ
 
 ### Update Booking API Test
-PUT https://assign-2-l2-b6-vehicle-rental-syste.vercel.app/api/v1/bookings/15
+PUT https://assign-2-l2-b6-vehicle-rental-syste.vercel.app/api/v1/bookings/17
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY1MDc5NDM5LCJleHAiOjE3NjUwOTc0Mzl9.19lcnAmZoZX93GEGDTY7NUNRpNvTbnYR2IuaPQleVIQ
 

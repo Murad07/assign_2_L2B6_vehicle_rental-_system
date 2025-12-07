@@ -19,23 +19,34 @@ const getAllUsers = async (req: Request, res: Response) => {
 }
 
 const updateUser = async (req: Request, res: Response) => {
-    const userId = req.params.id;
-    const requesterUser = req.user as { id: string, role: string };
-
-    const isOwner = String(requesterUser.id) as string === userId;
-    const isAdmin = requesterUser.role === 'admin';
-
-    // console.log('Requester User:', typeof (userId), typeof (requesterUser.id));
-
-    if (!isOwner && !isAdmin) {
-        return res.status(403).json({
-            success: false,
-            message: 'Forbidden: You do not have access to this resource',
-            error: 'Forbidden'
-        });
-    }
-
     try {
+        const userId = req.params.id;
+        const requesterUser = req.user as { id: string, role: string };
+
+        const isOwner = String(requesterUser.id) as string === userId;
+        const isAdmin = requesterUser.role === 'admin';
+
+        // console.log('Requester User:', typeof (userId), typeof (requesterUser.id));
+
+        console.log('Requester User:', requesterUser.role, req.body.role);
+
+        if (!isAdmin && req.body.role) {
+            // console.log('Requester User:', typeof (userId), typeof (requesterUser.id));
+            return res.status(403).json({
+                success: false,
+                message: 'Forbidden: You do not have access to this resource',
+                error: 'Forbidden: You cannot change role'
+            });
+        }
+
+        if (!isOwner && !isAdmin) {
+            return res.status(403).json({
+                success: false,
+                message: 'Forbidden: You do not have access to this resource',
+                error: 'Forbidden'
+            });
+        }
+
         const result = await userService.updateUser(userId as string, req.body);
 
         if (result.rows.length === 0) {
