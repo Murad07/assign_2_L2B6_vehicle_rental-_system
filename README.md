@@ -2,6 +2,11 @@
 
 ## Live Demo: [https://assign-2-l2-b6-vehicle-rental-syste.vercel.app](https://assign-2-l2-b6-vehicle-rental-syste.vercel.app)
 
+### Admin Credentials
+
+- Email: murad@example.com
+- Password: 123456
+
 ## 🎯 Project Overview
 
 A backend API for a vehicle rental management system that handles:

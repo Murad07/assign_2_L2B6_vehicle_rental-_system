@@ -28,8 +28,6 @@ const updateUser = async (req: Request, res: Response) => {
 
         // console.log('Requester User:', typeof (userId), typeof (requesterUser.id));
 
-        console.log('Requester User:', requesterUser.role, req.body.role);
-
         if (!isAdmin && req.body.role) {
             // console.log('Requester User:', typeof (userId), typeof (requesterUser.id));
             return res.status(403).json({

@@ -3,9 +3,17 @@ import { authService } from "./auth.service";
 import { error } from "console";
 
 const registerUser = async (req: Request, res: Response) => {
-    const { email, password } = req.body;
+    const { email, password, role } = req.body;
 
     try {
+        if (role === 'admin') {
+            return res.status(400).json({
+                success: false,
+                message: 'User registration failed',
+                errors: 'Admin role not allowed'
+            })
+        }
+
         if (!password || password.length < 6) {
             return res.status(400).json({
                 success: false,
