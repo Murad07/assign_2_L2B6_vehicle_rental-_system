@@ -43,7 +43,7 @@ const createBooking = async (payload: Record<string, unknown>) => {
     );
 
     let result = await pool.query(
-        'INSERT INTO bookings (customer_id, vehicle_id, rent_start_date, rent_end_date, total_price, status) VALUES ($1, $2, $3, $4, $5, $6) RETURNING id, customer_id, vehicle_id, rent_start_date, rent_end_date, status',
+        'INSERT INTO bookings (customer_id, vehicle_id, rent_start_date, rent_end_date, total_price, status) VALUES ($1, $2, $3, $4, $5, $6) RETURNING id, customer_id, vehicle_id, rent_start_date, rent_end_date, total_price, status',
         [customer_id, vehicle_id, rent_start_date, rent_end_date, total_price, 'active']
     );
 

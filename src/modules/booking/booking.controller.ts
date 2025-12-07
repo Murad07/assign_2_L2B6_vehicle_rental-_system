@@ -2,8 +2,19 @@ import { Request, Response } from "express";
 import { bookingService } from "./booking.service";
 
 const createBooking = async (req: Request, res: Response) => {
-
     try {
+        const requesterUser = req.user as { id: string, role: string };
+
+        const customer_id = req.body.customer_id;
+
+        if (customer_id !== requesterUser.id) {
+            return res.status(403).json({
+                success: false,
+                message: 'Forbidden: You cannot book for another user',
+                error: 'Forbidden User'
+            });
+        }
+
         const result = await bookingService.createBooking(req.body);
 
         if (result.error) {

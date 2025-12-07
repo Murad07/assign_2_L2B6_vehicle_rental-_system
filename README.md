@@ -1,6 +1,6 @@
 # 🚗 Vehicle Rental System
 
-## Live Demo: [https://assign-2-l2-b6-vehicle-rental-syste.vercel.app/](https://assign-2-l2-b6-vehicle-rental-syste.vercel.app/)
+## Live Demo: [https://assign-2-l2-b6-vehicle-rental-syste.vercel.app](https://assign-2-l2-b6-vehicle-rental-syste.vercel.app)
 
 ## 🎯 Project Overview
 
@@ -135,11 +135,6 @@ GET /api/v1/vehicles
 GET /api/v1/vehicles/:vehicleId
 ```
 
-**Example:**
-```
-GET /api/v1/vehicles/2
-```
-
 ### 6. Update Vehicle
 
 **Access:** Admin only  
@@ -148,11 +143,6 @@ GET /api/v1/vehicles/2
 #### Endpoint
 ```
 PUT /api/v1/vehicles/:vehicleId
-```
-
-**Example:**
-```
-PUT /api/v1/vehicles/1
 ```
 
 #### Request Headers
@@ -180,11 +170,6 @@ Authorization: Bearer <jwt_token>
 #### Endpoint
 ```
 DELETE /api/v1/vehicles/:vehicleId
-```
-
-**Example:**
-```
-DELETE /api/v1/vehicles/1
 ```
 
 #### Request Headers

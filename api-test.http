@@ -77,15 +77,15 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY1MDc5NDM5LCJleHAiOjE3NjUwOTc0Mzl9.19lcnAmZoZX93GEGDTY7NUNRpNvTbnYR2IuaPQleVIQ
 
 ### Create Booking API Test
-POST https://assign-2-l2-b6-vehicle-rental-syste.vercel.app/api/v1/bookings
+POST http://localhost:5000/api/v1/bookings
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY1MDc5NDM5LCJleHAiOjE3NjUwOTc0Mzl9.19lcnAmZoZX93GEGDTY7NUNRpNvTbnYR2IuaPQleVIQ
 
 {
-  "customer_id": 3,
+  "customer_id": 2,
   "vehicle_id": 2,
-  "rent_start_date": "2025-12-18",
-  "rent_end_date": "2025-12-19"
+  "rent_start_date": "2025-12-23",
+  "rent_end_date": "2025-12-24"
 }
 
 ### Get All Booking API Test
@@ -94,7 +94,7 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY1MDc5NDM5LCJleHAiOjE3NjUwOTc0Mzl9.19lcnAmZoZX93GEGDTY7NUNRpNvTbnYR2IuaPQleVIQ
 
 ### Update Booking API Test
-PUT https://assign-2-l2-b6-vehicle-rental-syste.vercel.app/api/v1/bookings/12
+PUT https://assign-2-l2-b6-vehicle-rental-syste.vercel.app/api/v1/bookings/15
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY1MDc5NDM5LCJleHAiOjE3NjUwOTc0Mzl9.19lcnAmZoZX93GEGDTY7NUNRpNvTbnYR2IuaPQleVIQ
 
