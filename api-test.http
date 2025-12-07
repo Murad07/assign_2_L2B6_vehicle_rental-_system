@@ -1,17 +1,17 @@
 ### User Registration API Test
-POST http://localhost:5000/api/v1/auth/signup
+POST https://assign-2-l2-b6-vehicle-rental-syste.vercel.app/api/v1/auth/signup
 Content-Type: application/json
 
 {
-  "name": "John Doe 4",
-  "email": "john.doe4@example.com",
-  "password": "securePassword123",
-  "phone": "01712345678",
+  "name": "Robin Khan",
+  "email": "robin@example.com",
+  "password": "123456",
+  "phone": "01712345777",
   "role": "customer"
 }
 
 ### User Login API Test
-POST http://localhost:5000/api/v1/auth/signin
+POST https://assign-2-l2-b6-vehicle-rental-syste.vercel.app/api/v1/auth/signin
 Content-Type: application/json
 
 {
@@ -20,29 +20,29 @@ Content-Type: application/json
 }
 
 ### Get All Users API Test
-POST http://localhost:5000/api/v1/users
+POST https://assign-2-l2-b6-vehicle-rental-syste.vercel.app/api/v1/users
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY1MDMwMzQ3LCJleHAiOjE3NjUwNDgzNDd9.GW__k1OsGKPbv36fmZ3rDB3isI2pFO-X_7yj8cTN_uE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY1MDc5NDM5LCJleHAiOjE3NjUwOTc0Mzl9.19lcnAmZoZX93GEGDTY7NUNRpNvTbnYR2IuaPQleVIQ
 
 ### Update User API Test
-PUT http://localhost:5000/api/v1/users/4
+PUT https://assign-2-l2-b6-vehicle-rental-syste.vercel.app/api/v1/users/3
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY1MDMwMzQ3LCJleHAiOjE3NjUwNDgzNDd9.GW__k1OsGKPbv36fmZ3rDB3isI2pFO-X_7yj8cTN_uE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY1MDc5NDM5LCJleHAiOjE3NjUwOTc0Mzl9.19lcnAmZoZX93GEGDTY7NUNRpNvTbnYR2IuaPQleVIQ
 
 {
-  "name": "Araf Hossain Updated",
+  "name": "Araf Hossain",
   "role": "customer"
 }
 
 ### Delete User API Test
-DELETE http://localhost:5000/api/v1/users/11
+DELETE https://assign-2-l2-b6-vehicle-rental-syste.vercel.app/api/v1/users/12
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY1MDMwMzQ3LCJleHAiOjE3NjUwNDgzNDd9.GW__k1OsGKPbv36fmZ3rDB3isI2pFO-X_7yj8cTN_uE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY1MDc5NDM5LCJleHAiOjE3NjUwOTc0Mzl9.19lcnAmZoZX93GEGDTY7NUNRpNvTbnYR2IuaPQleVIQ
 
 ### Vehicle Creation API Test
-POST http://localhost:5000/api/v1/vehicles
+POST https://assign-2-l2-b6-vehicle-rental-syste.vercel.app/api/v1/vehicles
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY1MDMwMzQ3LCJleHAiOjE3NjUwNDgzNDd9.GW__k1OsGKPbv36fmZ3rDB3isI2pFO-X_7yj8cTN_uE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY1MDc5NDM5LCJleHAiOjE3NjUwOTc0Mzl9.19lcnAmZoZX93GEGDTY7NUNRpNvTbnYR2IuaPQleVIQ
 
 {
   "vehicle_name": "Toyota Camry 2024 for delete",
@@ -53,50 +53,50 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgS
 }
 
 ### Get All Vehicles API Test
-GET http://localhost:5000/api/v1/vehicles
+GET https://assign-2-l2-b6-vehicle-rental-syste.vercel.app/api/v1/vehicles
 
 ### Get Vehicle By ID API Test
-GET http://localhost:5000/api/v1/vehicles/1
+GET https://assign-2-l2-b6-vehicle-rental-syste.vercel.app/api/v1/vehicles/1
 
 ### Update Vehicle API Test
-PUT http://localhost:5000/api/v1/vehicles/2
+PUT https://assign-2-l2-b6-vehicle-rental-syste.vercel.app/api/v1/vehicles/5
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY1MDMwMzQ3LCJleHAiOjE3NjUwNDgzNDd9.GW__k1OsGKPbv36fmZ3rDB3isI2pFO-X_7yj8cTN_uE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY1MDc5NDM5LCJleHAiOjE3NjUwOTc0Mzl9.19lcnAmZoZX93GEGDTY7NUNRpNvTbnYR2IuaPQleVIQ
 
 {
-  "vehicle_name": "Toyota Camry 2024 Premium",
+  "vehicle_name": "Toyota Camry 2024 DDD",
   "type": "car",
-  "registration_number": "ABC-1234",
+  "registration_number": "ABC-2222",
   "daily_rent_price": 55,
   "availability_status": "available"
 }
 
 ### Delete Vehicle API Test
-DELETE http://localhost:5000/api/v1/vehicles/4
+DELETE https://assign-2-l2-b6-vehicle-rental-syste.vercel.app/api/v1/vehicles/5
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY1MDMwMzQ3LCJleHAiOjE3NjUwNDgzNDd9.GW__k1OsGKPbv36fmZ3rDB3isI2pFO-X_7yj8cTN_uE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY1MDc5NDM5LCJleHAiOjE3NjUwOTc0Mzl9.19lcnAmZoZX93GEGDTY7NUNRpNvTbnYR2IuaPQleVIQ
 
 ### Create Booking API Test
-POST http://localhost:5000/api/v1/bookings
+POST https://assign-2-l2-b6-vehicle-rental-syste.vercel.app/api/v1/bookings
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY1MDMwMzQ3LCJleHAiOjE3NjUwNDgzNDd9.GW__k1OsGKPbv36fmZ3rDB3isI2pFO-X_7yj8cTN_uE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY1MDc5NDM5LCJleHAiOjE3NjUwOTc0Mzl9.19lcnAmZoZX93GEGDTY7NUNRpNvTbnYR2IuaPQleVIQ
 
 {
   "customer_id": 3,
   "vehicle_id": 2,
-  "rent_start_date": "2025-12-08",
-  "rent_end_date": "2025-12-09"
+  "rent_start_date": "2025-12-18",
+  "rent_end_date": "2025-12-19"
 }
 
 ### Get All Booking API Test
-GET http://localhost:5000/api/v1/bookings
+GET https://assign-2-l2-b6-vehicle-rental-syste.vercel.app/api/v1/bookings
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY1MDMwMzQ3LCJleHAiOjE3NjUwNDgzNDd9.GW__k1OsGKPbv36fmZ3rDB3isI2pFO-X_7yj8cTN_uE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY1MDc5NDM5LCJleHAiOjE3NjUwOTc0Mzl9.19lcnAmZoZX93GEGDTY7NUNRpNvTbnYR2IuaPQleVIQ
 
 ### Update Booking API Test
-PUT http://localhost:5000/api/v1/bookings/11
+PUT https://assign-2-l2-b6-vehicle-rental-syste.vercel.app/api/v1/bookings/12
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY1MDMwMzQ3LCJleHAiOjE3NjUwNDgzNDd9.GW__k1OsGKPbv36fmZ3rDB3isI2pFO-X_7yj8cTN_uE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTXVyYWQgSG9zc2FpbiIsInJvbGUiOiJhZG1pbiIsImVtYWlsIjoibXVyYWRAZXhhbXBsZS5jb20iLCJpZCI6MiwiaWF0IjoxNzY1MDc5NDM5LCJleHAiOjE3NjUwOTc0Mzl9.19lcnAmZoZX93GEGDTY7NUNRpNvTbnYR2IuaPQleVIQ
 
 {
   "status": "returned"
