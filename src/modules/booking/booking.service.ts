@@ -59,10 +59,10 @@ const createBooking = async (payload: Record<string, unknown>) => {
 const getAllBookings = async (isAdmin: boolean, customer_id: string) => {
     await autoReturnBooking();
 
-    let query = `SELECT b.id, b.customer_id, b.vehicle_id, b.rent_start_date, b.rent_end_date, b.total_price, b.status, v.vehicle_name, v.daily_rent_price 
+    let query = `SELECT b.id, b.customer_id, b.vehicle_id, b.rent_start_date, b.rent_end_date, b.total_price, b.status, v.vehicle_name, v.registration_number, v.daily_rent_price, v.type, u.name, u.email 
         FROM bookings b 
-        INNER JOIN vehicles v 
-        ON b.vehicle_id = v.id`;
+        INNER JOIN vehicles v ON b.vehicle_id = v.id
+        INNER JOIN users u ON b.customer_id = u.id`;
 
     let params = [] as any[];
 
@@ -73,19 +73,42 @@ const getAllBookings = async (isAdmin: boolean, customer_id: string) => {
 
     const result = await pool.query(query, params);
 
-    const final_result = result.rows.map((booking: any) => ({
-        id: booking.id,
-        customer_id: booking.customer_id,
-        vehicle_id: booking.vehicle_id,
-        rent_start_date: booking.rent_start_date.toISOString().split('T')[0],
-        rent_end_date: booking.rent_end_date.toISOString().split('T')[0],
-        total_price: booking.total_price,
-        status: booking.status,
-        vehicle: {
-            vehicle_name: booking.vehicle_name,
-            daily_rent_price: booking.daily_rent_price
-        }
-    }));
+    let final_result = null;
+    if (isAdmin) {
+        final_result = result.rows.map((booking: any) => ({
+            id: booking.id,
+            customer_id: booking.customer_id,
+            vehicle_id: booking.vehicle_id,
+            rent_start_date: booking.rent_start_date.toISOString().split('T')[0],
+            rent_end_date: booking.rent_end_date.toISOString().split('T')[0],
+            total_price: booking.total_price,
+            status: booking.status,
+            customer: {
+                name: booking.name,
+                email: booking.email
+            },
+            vehicle: {
+                vehicle_name: booking.vehicle_name,
+                registration_number: booking.registration_number
+            }
+        }));
+    } else {
+        final_result = result.rows.map((booking: any) => ({
+            id: booking.id,
+            customer_id: booking.customer_id,
+            vehicle_id: booking.vehicle_id,
+            rent_start_date: booking.rent_start_date.toISOString().split('T')[0],
+            rent_end_date: booking.rent_end_date.toISOString().split('T')[0],
+            total_price: booking.total_price,
+            status: booking.status,
+            vehicle: {
+                vehicle_name: booking.vehicle_name,
+                registration_number: booking.registration_number,
+                type: booking.type
+            }
+        }));
+    }
+
 
     return { data: final_result };
 }
