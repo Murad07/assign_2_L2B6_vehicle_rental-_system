@@ -1,13 +1,13 @@
 ### User Registration API Test
-POST http://localhost:5000/api/v1/auth/signup
+POST https://assign-2-l2-b6-vehicle-rental-syste.vercel.app/api/v1/auth/signup
 Content-Type: application/json
 
 {
-  "name": "Robin Khan 3",
-  "email": "robin3@example.com",
+  "name": "Sakib M 22 RD",
+  "email": "sakibm22@example.com",
   "password": "123456",
   "phone": "01712345777",
-  "role": "customer"
+  "role": "admin"
 }
 
 ### User Login API Test
@@ -15,7 +15,7 @@ POST https://assign-2-l2-b6-vehicle-rental-syste.vercel.app/api/v1/auth/signin
 Content-Type: application/json
 
 {
-  "email": "murad@example.com",
+  "email": "araf@example.com",
   "password": "123456"
 }
 
